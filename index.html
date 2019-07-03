@@ -41,12 +41,14 @@
   <meta name="description" content="Hello, WebVR! - A-Frame">
   <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
   <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"> </script>
+  <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body style="margin : 0px; overflow: hidden;">
   <a-scene embedded arjs="sourceType: webcam;">
     <a-marker preset="hiro">
-      <a-entity obj-model="obj: url(https://shreyanshmmgn.github.io/TestingAR_js/IronMan.obj); 
+        <button class=" a drum">a</button>
+      <a-entity class="Obj_mal" obj-model="obj: url(https://shreyanshmmgn.github.io/TestingAR_js/IronMan.obj); 
         mtl: url(https://shreyanshmmgn.github.io/TestingAR_js//IronMan.mtl)">
       </a-entity>
   </a-scene>
