@@ -42,16 +42,35 @@
   <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
   <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"> </script>
   <link rel="stylesheet" href="styles.css">
+  <script>
+  	function loadObject(url) {
+  		var iFrame = document.getElementById("arFrame");
+  		iFrame.contentWindow.postMessage(url, '*');
+  	}
+  </script>
+ 
 </head>
 
-<body style="margin : 0px; overflow: hidden;">
-  <a-scene embedded arjs="sourceType: webcam;">
-    <a-marker preset="hiro">
-        <button class=" a drum">a</button>
-      <a-entity class="Obj_mal" obj-model="obj: url(https://shreyanshmmgn.github.io/TestingAR_js/IronMan.obj); 
-        mtl: url(https://shreyanshmmgn.github.io/TestingAR_js//IronMan.mtl)">
-      </a-entity>
-  </a-scene>
+<body>
+  <div class="row">
+	<div class="col-sm-6 col-md-6 col-lg-9" style="height:600px;">
+		<iframe style="width: 80%;height:50%;" name="arFrame" id="arFrame" src="ar.html">
+		</iframe>
+	</div>
+
+	<div >
+		<div class="dynamicImgs">
+			<img class="image" onclick="loadObject('IronMan')" src="download.jpg">
+		</div>
+		<!--div class="dynamicImgs">
+			<img class="image" onclick="loadObject('resources/items/table/wooden-coffe-table')" src="resources/items/table/round-table.jpg">
+		</div-->
+		<div class="dynamicImgs">
+			<img class="image" onclick="loadObject('shirt_red')" src="download (1).jpg">
+    </div>
+    </div>
+    </div>
 </body>
 
 </html>
+<!-- class="col-sm-6 col-md-6 col-lg-3" style="border: 1px solid;height: 600px;overflow:scroll;" -->

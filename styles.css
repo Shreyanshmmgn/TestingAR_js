@@ -1,3 +1,5 @@
+
+
 #title {
   font-size: 5rem;
   color: #DBEDF3;
@@ -11,7 +13,10 @@ footer {
   color: #DBEDF3;
   font-family: sans-serif;
 }
-
+.Obj_mal {
+  height: 200px;
+  widows: 200px;
+}
 .w  {
 background-image: url(images/crash.png);
 
