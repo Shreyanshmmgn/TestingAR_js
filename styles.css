@@ -62,7 +62,7 @@ background-image: url(images/tom4.png);
 
 .drum {
   border: 10px solid #404B69;
-  font-size: 5rem;
+  font-size: 2rem;
   font-family: 'Arvo', cursive;
   line-height: 2;
   font-weight: 900;
@@ -75,5 +75,15 @@ background-image: url(images/tom4.png);
   text-align: center;
   margin: 10px;
   background-color: white;
-  
+
+}
+.m
+{
+  position: absolute;
+  right: 300px;
+}
+.z
+{
+  position: absolute;
+  left: 300px;
 }
