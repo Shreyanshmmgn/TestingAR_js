@@ -42,42 +42,23 @@
   <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
   <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"> </script>
   <link rel="stylesheet" href="styles.css">
-  <script>
-    function loadObject(url) {
-      var iFrame = document.getElementById("arFrame");
-      iFrame.contentWindow.postMessage(url, '*');
-    }
-    // document.querySelector('drum').addEventListener('click', changeMaterial);
-    // function changeMaterial(mtl) {
-    //   var iFrame = document.getElementById("arFrame");
-    //   iFrame.contentWindow.click(url, "*");
-    // }
-  </script>
-
 </head>
 
-<body>
-  <div class="row">
-    <div class="col-sm-6 col-md-6 col-lg-9" style="height:600px;">
-      <iframe style="width: 100%;height:100%;" name="arFrame" id="arFrame" src="ar.html">
-      </iframe>
-    </div>
-
-    <div>
-      <!-- <div class="dynamicImgs">
-        <img class="image" onclick="loadObject('shirt_red')" src="download (1).jpg">
-      </div> -->
-      <button class="drum" onclick="loadObject('shirt_red')">C</button>
-      <button class="drum" onclick="loadObject('shirt_green_obj')">a</button>
-      <!--div class="dynamicImgs">
-			<img class="image" onclick="loadObject('resources/items/table/wooden-coffe-table')" src="resources/items/table/round-table.jpg">
-		</div-->
-      <!-- <div class="dynamicImgs">
-        <img class="image" onclick="loadObject('shirt_red')" src="download (1).jpg">
-      </div> -->
-    </div>
-  </div>
+<body style="margin : 0px; overflow: hidden;">
+  <div>
+  <a-scene embedded arjs="sourceType: webcam;">
+    <a-marker preset="hiro">
+      
+      <a-entity >
+        <a-entity scale=".09 .09 .09 " rotation="-90 0 0" class="Obj_mal" obj-model="obj: url(https://shreyanshmmgn.github.io/TestingAR_js/shirt_red.obj); 
+        mtl: url(https://shreyanshmmgn.github.io/TestingAR_js//shirt_red.mtl)">
+        </a-entity>
+      </a-entity>
+  </a-scene>
+</div>
+<div>
+  <button class=" a drum">a</button>
+</div>
 </body>
 
 </html>
-<!-- class="col-sm-6 col-md-6 col-lg-3" style="border: 1px solid;height: 600px;overflow:scroll;" -->
