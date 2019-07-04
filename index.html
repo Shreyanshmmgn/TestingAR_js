@@ -50,7 +50,7 @@
     // document.querySelector('drum').addEventListener('click', changeMaterial);
     function changeMaterial(mtl) {
       var iFrame = document.getElementById("arFrame");
-      iFrame.contentWindow.click(mtl,"*");
+      iFrame.contentWindow.postMessage(mtl,"*");
     }
   </script>
 
